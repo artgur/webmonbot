@@ -1,0 +1,9 @@
+/webmonbot.egg-info/
+/webmonbot.json
+/build/
+/dist/
+.kitchen/
+/*.log
+/.cache/
+/*.xml
+/.idea/

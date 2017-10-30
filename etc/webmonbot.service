@@ -1,0 +1,11 @@
+[Unit]
+Description=webmonbot
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/webmonbot -f /etc/webmonbot.json
+ExecStop=/usr/bin/kill $MAINPID
+
+[Install]
+WantedBy=multi-user.target
