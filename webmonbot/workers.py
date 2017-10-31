@@ -63,10 +63,11 @@ class CheckerWorker(GenericWorker):
         logging.info("starting monitoring")
         self._put_msg("Monitoring up")
         while not self.exit_flag:
+            time.sleep(1)
             if not self.checker.check():
                 msg = "{0} is broken {1} not found".format(self.config['url'], self.config['substring'])
                 self._put_msg(msg)
-                time.sleep(1)
+
 
 
 
